@@ -19,12 +19,22 @@
 
         <main>
             <section class="hero">
-                <div class="hero-content">
-                    <h2>Order Now, Grab Later</h2>
-                    <p>Save time between classes with our easy pre-order system</p>
-                    <button class="cta-button">Start Ordering</button>
-                </div>
-            </section>
+    <div class="hero-content">
+        <h2>Order Now, Grab Later</h2>
+        <p>Save time between classes with our easy pre-order system</p>
+        <form id="quick-order-form" class="order-form">
+            <select id="item-select" aria-label="Select menu item">
+                <option value="" disabled selected>Select an item</option>
+                <option value="coffee">Specialty Coffee</option>
+                <option value="sandwich">Avocado Sandwich</option>
+                <option value="smoothie">Berry Smoothie</option>
+            </select>
+            <input type="number" min="1" max="10" value="1" id="quantity" aria-label="Quantity">
+            <input type="time" id="pickup-time" aria-label="Pickup time" required>
+            <button type="submit" class="cta-button">Pre-Order Now</button>
+        </form>
+    </div>
+</section>
 
             <section class="featured-items">
                 <h2>Popular Items</h2>
