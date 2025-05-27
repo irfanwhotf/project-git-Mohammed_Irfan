@@ -173,3 +173,75 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 1rem;
 }
+
+/* Form Styling */
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 1rem auto;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.order-form select,
+.order-form input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    font-size: 1rem;
+}
+
+.order-form input:focus,
+.order-form select:focus {
+    outline: 2px solid var(--primary);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .items-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.item {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.item:nth-child(3) {
+    animation-delay: 0.4s;
+}
